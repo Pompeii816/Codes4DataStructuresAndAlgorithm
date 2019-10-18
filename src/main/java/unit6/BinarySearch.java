@@ -17,14 +17,14 @@ public class BinarySearch {
         int mid = (start + end) / 2;
 
         while (start <= end) {
-            if (arr[mid].doubleValue() == key.doubleValue()) {
+            if (arr[mid].doubleValue() == key.doubleValue()) {//相等说明找到了，直接返回
                 return mid;
-            } else if (arr[mid].doubleValue() < key.doubleValue()) {
+            } else if (arr[mid].doubleValue() < key.doubleValue()) {//mid位的数值小于key，说明在mid后半段
                 start = mid + 1;
-            } else {
+            } else {//否则在前半段
                 end = mid - 1;
             }
-
+            //移动mid
             mid = (start + end) / 2;
         }
 
